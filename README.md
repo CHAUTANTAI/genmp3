@@ -60,17 +60,21 @@ Bằng cách này tất cả thư viện sẽ tự động được cài đặt.
 
 1. **Chạy back-end:**
     ```bash
-    uvicorn app.main:app --reload
+    uvicorn app.main:app --reload --host `yourIP` --port `yourPort`
+    ```
+    #### Excample
+   ```bash
+    uvicorn app.main:app --reload --host 192.168.0.113 --port 6969
     ```
    (Điều chỉnh đường dẫn `app.main` nếu cần thiết để phù hợp với cấu trúc thư mục của bạn)
 
-2. **Chạy ứng dụng Flutter Android:**
+3. **Chạy ứng dụng Flutter Android:**
     ```bash
     flutter run
     ```
    (Đảm bảo thiết bị Android của bạn đã kết nối và được nhận diện bởi ADB)
 
-3. **Chạy ứng dụng Flutter Web:**
+4. **Chạy ứng dụng Flutter Web:**
     ```bash
     flutter build web
     flutter serve
@@ -96,6 +100,22 @@ SQLALCHEMY_DATABASE_URL = (
 )
 
 thay đổi Chuỗi kết nối bao gồm mật khẩu hay Chuỗi kết nối không bao gồm mật khẩu tùy thuộc vào cấu hình trên DB của bạn.
+
+### Cấu hình Ip ở Client
+
+class IpConfig {
+  static const String ip = "http://192.168.0.106:8000";
+
+  static String get frontUrl => "$ip/api/v0/";
+}
+
+thay đổi "http://192.168.0.106:8000" thành Ip máy của bạn
+
+### Cấu hình Ip ở Admin-Dashboard Web (admin-dashboard\app\lib\services\service_mng.dart)
+
+String ip = "http://192.168.0.106:8000";
+
+thay đổi thành Ip máy của bạn
 
 
 ## Sử dụng ứng dụng
