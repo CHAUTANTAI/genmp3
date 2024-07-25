@@ -8,10 +8,6 @@ Genmp3 sử dụng MySQL 8.3.11 làm hệ quản trị cơ sở dữ liệu đ�
 
 Phần back-end của Genmp3 được xây dựng bằng FastAPI, giúp tạo ra một server API nhanh và hiệu quả. Đồng thời, chúng tôi sử dụng Python để huấn luyện mô hình AI và triển khai các thuật toán một cách dễ dàng và chính xác.
 
-## Giới thiệu
-
-Genmp3 sử dụng MySQL 8.3.11 làm hệ quản trị cơ sở dữ liệu để lưu trữ và quản lý dữ liệu người dùng, bài hát, và các thông tin khác. MySQL 8.3.11 cung cấp hiệu suất và tính ổn định cao cho ứng dụng của bạn.
-
 ## Hướng dẫn cài đặt
 
 ### Bước 1: Cài đặt Flutter
@@ -39,6 +35,8 @@ Genmp3 sử dụng MySQL 8.3.11 làm hệ quản trị cơ sở dữ liệu đ�
     pip install -r requirements.txt
     ```
 Bằng cách này tất cả thư viện sẽ tự động được cài đặt.
+
+2. Đặt file model (svm_genre_model.joblib) vào trong thư mục ai (server\app\ai)
 
 ### Bước 4: Cài đặt MySQL
 
