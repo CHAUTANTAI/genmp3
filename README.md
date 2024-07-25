@@ -101,7 +101,7 @@ SQLALCHEMY_DATABASE_URL = (
 
 thay đổi Chuỗi kết nối bao gồm mật khẩu hay Chuỗi kết nối không bao gồm mật khẩu tùy thuộc vào cấu hình trên DB của bạn.
 
-### Cấu hình Ip ở Client
+### Cấu hình IP ở Client
 ```bash
     class IpConfig {
       static const String ip = "http://192.168.0.106:8000";
@@ -109,14 +109,14 @@ thay đổi Chuỗi kết nối bao gồm mật khẩu hay Chuỗi kết nối k
       static String get frontUrl => "$ip/api/v0/";
     }
 ```
-Thay đổi "http://192.168.0.106:8000" thành Ip máy của bạn
+Thay đổi "http://192.168.0.106:8000" thành IP máy của bạn
 
-### Cấu hình Ip ở Admin-Dashboard Web (admin-dashboard\app\lib\services\service_mng.dart)
+### Cấu hình IP ở Admin-Dashboard Web (admin-dashboard\app\lib\services\service_mng.dart)
 
 ```bash
     String ip = "http://192.168.0.106:8000";
 ```
-Thay đổi thành Ip máy của bạn
+Thay đổi thành IP máy của bạn
 
 ### Thay đổi đường dẫn đến file model đã được training (\app\services\ai_service.py)
 ```bash
@@ -124,8 +124,8 @@ Thay đổi thành Ip máy của bạn
     model_path_topic = "D:\\University\\HK8\\LuanVanTotNghiep\\server\\app\\ai\\svm_topic_model.joblib"
 ```
 Thay đổi Phần đầu đường dẫn để chính xác với cây thư mục trong máy. Lưu ý phần tên file model không được thay đổi.
-Examle: "C:\\server\\app\\ai\\svm_topic_model.joblib"
 
+Examle: "C:\\server\\app\\ai\\svm_topic_model.joblib"
 
 
 ## Sử dụng ứng dụng
