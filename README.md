@@ -81,7 +81,7 @@ Bằng cách này tất cả thư viện sẽ tự động được cài đặt.
     ```
    (Hoặc sử dụng `flutter run -d chrome` để chạy trực tiếp trên trình duyệt)
 
-## Một số lưu ý
+## Một số lưu ý quan trọng phải thực hiện
 
 ### Cấu hình môi trường
 
@@ -102,20 +102,30 @@ SQLALCHEMY_DATABASE_URL = (
 thay đổi Chuỗi kết nối bao gồm mật khẩu hay Chuỗi kết nối không bao gồm mật khẩu tùy thuộc vào cấu hình trên DB của bạn.
 
 ### Cấu hình Ip ở Client
-
-class IpConfig {
-  static const String ip = "http://192.168.0.106:8000";
-
-  static String get frontUrl => "$ip/api/v0/";
-}
-
-thay đổi "http://192.168.0.106:8000" thành Ip máy của bạn
+    ```bash
+    class IpConfig {
+      static const String ip = "http://192.168.0.106:8000";
+    
+      static String get frontUrl => "$ip/api/v0/";
+    }
+    ```
+Thay đổi "http://192.168.0.106:8000" thành Ip máy của bạn
 
 ### Cấu hình Ip ở Admin-Dashboard Web (admin-dashboard\app\lib\services\service_mng.dart)
 
-String ip = "http://192.168.0.106:8000";
+    ```bash
+    String ip = "http://192.168.0.106:8000";
+    ```
+Thay đổi thành Ip máy của bạn
 
-thay đổi thành Ip máy của bạn
+### Thay đổi đường dẫn đến file model đã được training (\app\services\ai_service.py)
+    ```bash
+    model_path_genre = "D:\\University\\HK8\\LuanVanTotNghiep\\server\\app\\ai\\svm_genre_model.joblib"
+    model_path_topic = "D:\\University\\HK8\\LuanVanTotNghiep\\server\\app\\ai\\svm_topic_model.joblib"
+    ```
+Thay đổi Phần đầu đường dẫn để chính xác với cây thư mục trong máy. Lưu ý phần tên file model không được thay đổi.
+Examle: "C:\\server\\app\\ai\\svm_topic_model.joblib"
+
 
 
 ## Sử dụng ứng dụng
