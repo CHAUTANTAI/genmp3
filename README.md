@@ -113,9 +113,9 @@ Thay đổi "http://192.168.0.106:8000" thành Ip máy của bạn
 
 ### Cấu hình Ip ở Admin-Dashboard Web (admin-dashboard\app\lib\services\service_mng.dart)
 
-    ```bash
+```bash
     String ip = "http://192.168.0.106:8000";
-    ```
+```
 Thay đổi thành Ip máy của bạn
 
 ### Thay đổi đường dẫn đến file model đã được training (\app\services\ai_service.py)
