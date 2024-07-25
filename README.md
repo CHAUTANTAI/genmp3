@@ -116,16 +116,6 @@ Thay đổi "http://192.168.0.106:8000" thành IP máy của bạn
 ```
 Thay đổi thành IP máy của bạn
 
-### Thay đổi đường dẫn đến file model đã được training (\app\services\ai_service.py)
-```bash
-    model_path_genre = "D:\\University\\HK8\\LuanVanTotNghiep\\server\\app\\ai\\svm_genre_model.joblib"
-    model_path_topic = "D:\\University\\HK8\\LuanVanTotNghiep\\server\\app\\ai\\svm_topic_model.joblib"
-```
-Thay đổi Phần đầu đường dẫn để chính xác với cây thư mục trong máy. Lưu ý phần tên file model không được thay đổi.
-
-Examle: "C:\\server\\app\\ai\\svm_topic_model.joblib"
-
-
 ## Sử dụng ứng dụng
 
 1. Mở ứng dụng và đăng ký tài khoản mới.
