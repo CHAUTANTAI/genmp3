@@ -99,6 +99,13 @@ SQLALCHEMY_DATABASE_URL = (
 
 thay đổi Chuỗi kết nối bao gồm mật khẩu hay Chuỗi kết nối không bao gồm mật khẩu tùy thuộc vào cấu hình trên DB của bạn.
 
+### Thay đổi Ip cho Enpoint được gọi lại (endpoint\ai.py)
+```bash
+interaction_data_url = "http://192.168.0.106:8000/api/v0/ais/get-interaction-user-for-train-ai-model/"
+song_data_url = "http://192.168.0.106:8000/api/v0/ais/get-feature-song-for-train-ai-model/"
+```
+Thay đổi http://192.168.0.106:8000 thành Ip và port khi chạy server
+
 ### Cấu hình IP ở Client
 ```bash
     class IpConfig {
